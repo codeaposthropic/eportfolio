@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ePortfolio - Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+    }
+
+    .navbar { background-color: #1e3a8a; }
+    .navbar-brand { font-weight: bold; font-size: 1.3rem; color: white !important; }
+    .nav-link { color: rgba(255,255,255,0.85) !important; }
+    .nav-link:hover { color: white !important; text-decoration: underline; }
+
+    .page-hero {
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 2rem; font-weight: bold; }
+    .page-hero p { font-size: 1rem; opacity: 0.9; margin-top: 8px; }
+
+    .main-content { max-width: 960px; margin: 40px auto; padding: 0 20px; }
+
+    .section-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .section-card h2 {
+      color: #1e3a8a; font-size: 1.4rem;
+      margin-bottom: 18px; padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .section-card h3 { color: #1e3a8a; font-size: 1.05rem; margin-top: 22px; margin-bottom: 8px; }
+    .section-card p { color: #444; line-height: 1.8; margin-bottom: 10px; }
+    .section-card ul { color: #444; line-height: 1.9; padding-left: 20px; }
+
+    pre {
+      background-color: #1e293b;
+      color: #e2e8f0;
+      padding: 18px;
+      border-radius: 6px;
+      font-size: 0.87rem;
+      line-height: 1.65;
+      overflow-x: auto;
+      margin: 14px 0;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .demo-label { font-size: 0.82rem; color: #64748b; font-style: italic; margin-bottom: 8px; }
+
+    .demo-area {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 20px;
+      margin: 10px 0 18px 0;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.88rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ePortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+          <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+          <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+          <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+          <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <h1>Bootstrap: Rapid Web Development</h1>
+    <p>Learn how Bootstrap simplifies responsive design with pre-built components and a powerful grid system.</p>
+  </div>
+
+  <div class="main-content">
+
+    <!-- THEORY -->
+    <div class="section-card">
+      <h2>Theoretical Concepts of Bootstrap</h2>
+
+      <h3>What is Bootstrap?</h3>
+      <p>
+        Bootstrap is a free and open-source front-end framework originally developed by engineers at Twitter and
+        released publicly in 2011. It provides a large collection of pre-designed CSS styles and JavaScript
+        components that developers can use immediately without writing everything from scratch.
+        Bootstrap's primary goal is to make it faster and easier to build responsive, mobile-first websites.
+        You simply include Bootstrap via a CDN link in your HTML file and start using its classes.
+      </p>
+
+      <h3>Grid System</h3>
+      <p>
+        Bootstrap's grid system is one of its most important features. It is based on a 12-column layout
+        system that allows you to divide the page into columns and control how those columns are arranged
+        at different screen sizes. You use classes like <code>col-sm-6</code> (half-width on small screens),
+        <code>col-md-4</code> (one-third width on medium screens), or <code>col-lg-3</code> (one-quarter
+        width on large screens). The grid must always be wrapped in a <code>.container</code> or
+        <code>.container-fluid</code> and then a <code>.row</code> before adding columns inside.
+        This makes building responsive layouts straightforward without writing custom media queries.
+      </p>
+
+      <h3>Components</h3>
+      <p>
+        Bootstrap includes a wide variety of pre-styled components that are ready to use with just a few
+        class names. These include navigation bars (<code>navbar</code>), cards (<code>card</code>),
+        buttons (<code>btn</code>), alerts (<code>alert</code>), modals (pop-up dialogue boxes),
+        badges, breadcrumbs, progress bars, and many more. Each component is fully customisable and
+        follows Bootstrap's consistent design language.
+      </p>
+
+      <h3>Utility Classes</h3>
+      <p>
+        Bootstrap provides hundreds of utility classes for quick styling without needing to write custom CSS.
+        These include spacing utilities (<code>m-3</code> for margin, <code>p-3</code> for padding),
+        text utilities (<code>text-center</code>, <code>text-end</code>, <code>fw-bold</code>),
+        colour utilities (<code>text-primary</code>, <code>bg-danger</code>), display utilities
+        (<code>d-flex</code>, <code>d-none</code>), and many others. These utilities help speed up
+        development significantly.
+      </p>
+
+      <h3>Responsive Breakpoints</h3>
+      <p>
+        Bootstrap defines five responsive breakpoints based on screen width:
+        <code>xs</code> (extra small, less than 576px), <code>sm</code> (small, 576px and up),
+        <code>md</code> (medium, 768px and up), <code>lg</code> (large, 992px and up), and
+        <code>xl</code> (extra large, 1200px and up). These breakpoints are used in grid classes
+        and utility classes to create layouts that adapt at each screen size.
+      </p>
+
+      <h3>JavaScript Components</h3>
+      <p>
+        Bootstrap also includes interactive JavaScript components such as modals, dropdowns, tooltips,
+        carousels, collapses, and offcanvas sidebars. These components require the Bootstrap JavaScript
+        bundle to be included (either via CDN or downloaded). They are controlled using HTML data attributes
+        like <code>data-bs-toggle</code> and <code>data-bs-target</code>, meaning you can use them
+        without writing any custom JavaScript.
+      </p>
+    </div>
+
+    <!-- PRACTICAL -->
+    <div class="section-card">
+      <h2>Practical Examples of Bootstrap</h2>
+
+      <!-- Example 1: Navbar -->
+      <h3>Responsive Navbar</h3>
+      <p>
+        A Bootstrap navbar that collapses into a hamburger menu on smaller screens.
+        The <code>navbar-expand-lg</code> class means it expands on large screens and collapses on smaller ones.
+      </p>
+
+      <pre>
+&lt;nav class="navbar navbar-expand-lg navbar-dark bg-primary"&gt;
+  &lt;div class="container-fluid"&gt;
+
+    &lt;a class="navbar-brand" href="#"&gt;Aakash Portfolio&lt;/a&gt;
+
+    &lt;!-- Hamburger button shown on small screens --&gt;
+    &lt;button class="navbar-toggler" type="button"
+      data-bs-toggle="collapse" data-bs-target="#navMenu"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+
+    &lt;div class="collapse navbar-collapse" id="navMenu"&gt;
+      &lt;ul class="navbar-nav ms-auto"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/nav&gt;
+      </pre>
+
+      <p class="demo-label">Live demo – Bootstrap navbar (click the toggle button if you're on a small screen):</p>
+      <div class="demo-area" style="padding:0; overflow:hidden; border-radius:6px;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Aakash Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#demoNav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="demoNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Example 2: Card Component -->
+      <h3>Card Component</h3>
+      <p>
+        Bootstrap's card component is a flexible content container with various options for headers,
+        footers, images, and body content.
+      </p>
+
+      <pre>
+&lt;div class="card" style="max-width: 320px;"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Aakash Bhandari&lt;/h5&gt;
+    &lt;h6 class="card-subtitle mb-2 text-muted"&gt;Cyber Security Student&lt;/h6&gt;
+    &lt;p class="card-text"&gt;
+      Passionate about network security, ethical hacking, and web development.
+    &lt;/p&gt;
+    &lt;a href="mailto:kcs25a.aks@gmail.com" class="btn btn-primary"&gt;Contact Me&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </pre>
+
+      <p class="demo-label">Live demo – Bootstrap card:</p>
+      <div class="demo-area">
+        <div class="card" style="max-width: 320px;">
+          <div class="card-body">
+            <h5 class="card-title">Aakash Bhandari</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Cyber Security Student</h6>
+            <p class="card-text">Passionate about network security, ethical hacking, and web development.</p>
+            <a href="mailto:kcs25a.aks@gmail.com" class="btn btn-primary">Contact Me</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 3: Responsive Grid -->
+      <h3>Responsive Grid</h3>
+      <p>
+        A four-column layout using Bootstrap's grid system. On large screens all four columns show side by side.
+        On small screens they arrange into two columns. On extra small screens they stack into one column.
+      </p>
+
+      <pre>
+&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+
+    &lt;!-- col-sm-6: half width on small screens
+         col-lg-3: quarter width on large screens --&gt;
+    &lt;div class="col-sm-6 col-lg-3 mb-3"&gt;
+      &lt;div class="bg-primary text-white p-3 rounded text-center"&gt;Column 1&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-sm-6 col-lg-3 mb-3"&gt;
+      &lt;div class="bg-primary text-white p-3 rounded text-center"&gt;Column 2&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-sm-6 col-lg-3 mb-3"&gt;
+      &lt;div class="bg-primary text-white p-3 rounded text-center"&gt;Column 3&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-sm-6 col-lg-3 mb-3"&gt;
+      &lt;div class="bg-primary text-white p-3 rounded text-center"&gt;Column 4&lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+      </pre>
+
+      <p class="demo-label">Live demo – responsive grid (resize your browser to see it change):</p>
+      <div class="demo-area">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 mb-3">
+            <div class="bg-primary text-white p-3 rounded text-center">Column 1</div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-3">
+            <div class="bg-primary text-white p-3 rounded text-center">Column 2</div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-3">
+            <div class="bg-primary text-white p-3 rounded text-center">Column 3</div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-3">
+            <div class="bg-primary text-white p-3 rounded text-center">Column 4</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Example 4: Modal -->
+      <h3>Modal Popup</h3>
+      <p>
+        Bootstrap modals are dialogue boxes that appear on top of the page content.
+        They are triggered by a button and controlled entirely through Bootstrap's
+        JavaScript using <code>data-bs-toggle</code> attributes — no custom JS needed.
+      </p>
+
+      <pre>
+&lt;!-- Button that opens the modal --&gt;
+&lt;button type="button" class="btn btn-primary"
+  data-bs-toggle="modal" data-bs-target="#myModal"&gt;
+  Open Modal
+&lt;/button&gt;
+
+&lt;!-- The modal itself --&gt;
+&lt;div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title"&gt;About Aakash&lt;/h5&gt;
+        &lt;button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class="modal-body"&gt;
+        I am a Cyber Security student studying full stack development.
+        This modal is a Bootstrap component — no custom JavaScript required.
+      &lt;/div&gt;
+
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Save&lt;/button&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+      </pre>
+
+      <p class="demo-label">Live demo – click the button to open the modal:</p>
+      <div class="demo-area">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">
+          Open Modal
+        </button>
+      </div>
+
+      <!-- Modal element -->
+      <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="demoModalLabel">About Aakash</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              I am a Cyber Security student studying full stack development.
+              This modal is a Bootstrap component — no custom JavaScript was required to make it work.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 ePortfolio. All rights reserved. | Aakash Bhandari | kcs25a.aks@gmail.com</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
