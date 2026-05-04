@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ePortfolio - Full Stack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #222222;
+    }
+    .navbar { background-color: #1e3a8a; }
+    .navbar-brand { font-weight: bold; font-size: 1.3rem; color: #ffffff !important; }
+    .nav-link { color: #ffffff !important; }
+    .nav-link:hover { text-decoration: underline; }
+
+    .page-hero {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 2rem; font-weight: bold; color: #ffffff; }
+    .page-hero p  { font-size: 1rem; color: #ffffff; margin-top: 8px; }
+
+    .main-content { max-width: 960px; margin: 40px auto; padding: 0 20px; }
+
+    .section-card {
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 6px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .section-card h2 {
+      color: #1e3a8a; font-size: 1.4rem;
+      margin-bottom: 18px; padding-bottom: 8px;
+      border-bottom: 2px solid #cccccc;
+    }
+    .section-card h3 { color: #1a1a1a; font-size: 1.05rem; margin-top: 22px; margin-bottom: 8px; }
+    .section-card p  { color: #222222; line-height: 1.8; margin-bottom: 10px; }
+    .section-card ul { color: #222222; line-height: 1.9; padding-left: 20px; margin-bottom: 10px; }
+    .section-card code { background-color: #f0f0f0; color: #c0392b; padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+
+    /* Stack diagram layers — dark bg, white text (intentional, readable) */
+    .stack-layer {
+      border-radius: 6px;
+      padding: 18px 22px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .stack-layer h4 { margin: 0 0 6px 0; font-size: 1rem; color: #ffffff; }
+    .stack-layer p  { margin: 0; font-size: 0.88rem; color: #ffffff; }
+    .layer-frontend { background-color: #1e3a8a; }
+    .layer-backend  { background-color: #2a50b0; }
+    .layer-database { background-color: #3a60c0; }
+
+    .stack-arrow {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333333;
+      margin: 4px 0;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: #ffffff;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.88rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">ePortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+          <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+          <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+          <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+          <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Full Stack Development</h1>
+    <p>Understand the comprehensive approach to building complete web applications.</p>
+  </div>
+
+  <div class="main-content">
+
+    <div class="section-card">
+      <h2>Theoretical Concepts of Full Stack Development</h2>
+
+      <h3>What is Full Stack Development?</h3>
+      <p>
+        Full Stack Development refers to the ability to work on both the front-end (client-side) and the
+        back-end (server-side) of a web application, covering the complete development process from
+        the user interface all the way through to the database. A full stack developer understands how
+        every layer of a web application works and how they interact with each other.
+        The word "stack" refers to the collection of technologies used across all these layers.
+        Rather than specialising in just one area, full stack developers can build and maintain entire
+        applications independently.
+      </p>
+
+      <h3>Front-End Development</h3>
+      <p>
+        The front end is everything the user sees and interacts with directly in their browser.
+        It is built using three core technologies: HTML for structuring content, CSS for applying
+        visual styles and layout, and JavaScript for adding interactive behaviour.
+        Front-end developers also often use frameworks and libraries to speed up development.
+        Bootstrap is a popular CSS framework that provides ready-made responsive components.
+        JavaScript frameworks like React, Vue.js, and Angular are widely used to build complex,
+        dynamic user interfaces. The front end communicates with the back end by sending HTTP
+        requests and receiving data (usually in JSON format) in return.
+      </p>
+
+      <h3>Back-End Development</h3>
+      <p>
+        The back end is the server-side part of an application — the code that runs on a web server
+        rather than in the user's browser. It handles the business logic of the application, processes
+        incoming requests from the front end, communicates with the database, and sends responses back.
+        Common back-end programming languages and environments include Node.js (JavaScript on the server),
+        Python with frameworks like Django or Flask, PHP, Ruby on Rails, and Java with Spring.
+        The back end is responsible for things like user authentication, data processing, security checks,
+        and serving the correct data to the correct user.
+      </p>
+
+      <h3>Databases</h3>
+      <p>
+        A database is where the application's data is permanently stored. When a user registers on a website,
+        their information is saved to a database. When they log in again, the back end retrieves that data
+        and uses it to authenticate them. Databases come in two main types: relational databases, which store
+        data in structured tables with rows and columns (examples include MySQL, PostgreSQL, and SQLite),
+        and non-relational (NoSQL) databases, which store data in a more flexible format such as documents
+        or key-value pairs (examples include MongoDB and Redis).
+      </p>
+
+      <h3>Role of APIs</h3>
+      <p>
+        APIs (Application Programming Interfaces) are the mechanism that allows the front end and back end
+        to communicate with each other. When you load a webpage and it fetches live data — like a weather
+        forecast or a list of products — it is using an API call. The most common type in web development
+        is a REST API, where the front end sends HTTP requests (GET, POST, PUT, DELETE) to specific URL
+        endpoints on the server, and the server responds with data in JSON format.
+      </p>
+
+      <h3>Version Control and Deployment</h3>
+      <p>
+        Version control is the practice of tracking and managing changes to code over time. Git is the most
+        widely used version control system. Developers use Git to save snapshots of their code (commits),
+        work on separate features without affecting the main codebase (branches), and collaborate with others.
+        GitHub and GitLab are popular platforms for hosting Git repositories. Deployment refers to the process
+        of making the application available on the internet. Platforms like GitHub Pages, Netlify, Vercel,
+        and AWS are commonly used to host and deploy web applications.
+      </p>
+
+      <h3>DevOps and Collaboration</h3>
+      <p>
+        DevOps is a set of practices that combines software development (Dev) and IT operations (Ops)
+        with the aim of shortening development cycles and delivering updates more reliably.
+        Key DevOps practices include Continuous Integration (CI), where code changes are automatically
+        tested whenever they are pushed to the repository, and Continuous Delivery/Deployment (CD),
+        where tested code is automatically deployed to production. Tools like GitHub Actions, Jenkins,
+        and Docker are commonly used in DevOps workflows.
+      </p>
+
+      <h3>Full Stack and Cyber Security</h3>
+      <p>
+        As a Cyber Security student, I find full stack development directly relevant to my field.
+        Most modern cyber attacks target web applications — SQL injection targets the database layer,
+        XSS (Cross-Site Scripting) targets the front end, broken authentication targets the back-end
+        session management, and insecure APIs expose sensitive data. Understanding how each layer
+        of a full stack application is built makes it much easier to identify where vulnerabilities
+        exist and how to fix them. Many roles in Cyber Security — such as penetration tester or
+        application security engineer — require a solid understanding of how web applications are developed.
+      </p>
+    </div>
+
+    <!-- STACK DIAGRAM -->
+    <div class="section-card">
+      <h2>The Technology Stack — Overview</h2>
+      <p>The diagram below shows the three main layers of a full stack web application and the technologies used in each layer.</p>
+
+      <div style="max-width: 600px; margin-top: 20px;">
+        <div class="stack-layer layer-frontend">
+          <h4>🖥️ Front End (Client Side)</h4>
+          <p>Technologies: HTML · CSS · JavaScript · Bootstrap · React / Vue.js</p>
+          <p>Runs in the user's browser. Responsible for what the user sees and interacts with.</p>
+        </div>
+
+        <div class="stack-arrow">↕ HTTP Requests / JSON Responses (API)</div>
+
+        <div class="stack-layer layer-backend">
+          <h4>⚙️ Back End (Server Side)</h4>
+          <p>Technologies: Node.js · Python (Django / Flask) · PHP · Java (Spring)</p>
+          <p>Runs on a web server. Handles business logic, authentication, and data processing.</p>
+        </div>
+
+        <div class="stack-arrow">↕ SQL Queries / Database Calls</div>
+
+        <div class="stack-layer layer-database">
+          <h4>🗄️ Database</h4>
+          <p>Technologies: MySQL · PostgreSQL · MongoDB · SQLite</p>
+          <p>Stores and retrieves all application data permanently.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMMON STACKS -->
+    <div class="section-card">
+      <h2>Common Full Stack Technology Combinations</h2>
+      <p>In practice, developers often use a recognised combination of technologies that work well together. These combinations are sometimes given acronym names:</p>
+      <ul>
+        <li>
+          <strong>MERN Stack</strong> — MongoDB, Express.js, React, Node.js.
+          A popular JavaScript-only stack where both the front end and back end use JavaScript.
+        </li>
+        <li>
+          <strong>MEAN Stack</strong> — MongoDB, Express.js, Angular, Node.js.
+          Similar to MERN but uses Angular instead of React for the front end.
+        </li>
+        <li>
+          <strong>LAMP Stack</strong> — Linux, Apache, MySQL, PHP.
+          A traditional and widely used stack, especially for content management systems like WordPress.
+        </li>
+        <li>
+          <strong>Django Stack</strong> — Python, Django, PostgreSQL.
+          A clean and powerful stack favoured for data-heavy applications and rapid development.
+        </li>
+      </ul>
+      <p>
+        For this module, the focus has been on the front-end layer — HTML, CSS, Bootstrap and JavaScript —
+        which is the foundation needed before moving into back-end development and databases.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 ePortfolio. All rights reserved. | Aakash Bhandari | kcs25a.aks@gmail.com</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
